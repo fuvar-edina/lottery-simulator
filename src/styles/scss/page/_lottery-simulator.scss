@@ -1,0 +1,53 @@
+@use "../assets" as *;
+
+.lottery-simulator {
+    font-family: $font-default;
+    height: 100vh;
+    width: 100%;
+
+    &__header {
+        @include flex-container(row, flex-start, center, 3.207rem);
+        background: linear-gradient(
+            270deg,
+            #f6f0c6 0%,
+            #d9135d 0.01%,
+            rgba(214, 19, 92, 0.996895) 0.02%,
+            #f6f0c6 0.03%,
+            #a6d9c8 80.73%,
+            #a5d9c8 100%
+        );
+        padding: 0 2.07rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6rem;
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
+
+    &__content {
+        background-color: $color-gray;
+        height: 100%;
+        @include flex-container(row, center, center, 0);
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 575px) {
+    .lottery-simulator {
+        &__title {
+            font-size: 2rem;
+            line-height: 2.7rem;
+        }
+
+        &__content {
+            width: 100%;
+            padding: 0 2.4rem 0 1.6rem;
+        }
+    }
+}

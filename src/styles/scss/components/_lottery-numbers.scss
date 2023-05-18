@@ -1,0 +1,43 @@
+@use "../assets" as *;
+
+.lottery-numbers {
+    @include flex-container(column, flex-start, flex-start, 2.4rem);
+
+    &__winning-numbers,
+    &__your-numbers {
+        @include flex-container(row, flex-start, center, 2.7rem);
+    }
+
+    &__numbers-list {
+        @include flex-container(row, flex-start, center, 1.6rem);
+        flex: 1;
+    }
+
+    &__text {
+        width: 13.3rem;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 575px) {
+    .lottery-numbers {
+        @include flex-container(column, flex-start, flex-start, 1.6rem);
+
+        &__winning-numbers,
+        &__your-numbers {
+            @include flex-container(row, flex-start, center, 1.9rem);
+        }
+
+        &__numbers-list {
+            @include flex-container(row, flex-start, center, 1.2rem);
+        }
+
+        &__text {
+            width: 10.2rem;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+    }
+}

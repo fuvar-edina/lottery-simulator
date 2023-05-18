@@ -1,0 +1,29 @@
+@use "../assets" as *;
+
+.lottery-number {
+    @include border-radius($border-radius-m);
+    @include flex-container(row, center, center, 0);
+    width: 3.4rem;
+    height: 3.8rem;
+    border: 1px solid $color-green;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+
+    p {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 575px) {
+    .lottery-number {
+        width: 2.2rem;
+        height: 2.46rem;
+        @include border-radius(0.5rem);
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+    }
+}
